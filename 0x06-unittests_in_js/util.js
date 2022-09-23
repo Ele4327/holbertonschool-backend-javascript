@@ -1,29 +1,19 @@
+
 const Utils = {
-    calculateNumber(type, a, b) {
-        const aRound = Math.round(a);
-        const bRound = Math.round(b);
-    
-        if (type === 'SUM') {
-          let sumValue = aRound + bRound
-          return sumValue;
-        }
-    
-        if (type === 'SUBTRACT') {
-          let subValue = aRound - bRound;
-          return subValue;
-        }
-    
-        if (type === 'DIVIDE') {
-          let divValue = aRound / bRound;
-    
-          if (bRound === 0) {
-            return 'Error';
-          }
-    
-          return divValue;
-        }
-    },
-  };
-    
-  module.exports = Utils;
-  
+	calculateNumber(type, a, b) {
+		if (type === 'SUM') {
+			return Math.round(a) + Math.round(b)
+		}
+		if (type === 'SUBTRACT') {
+			return Math.round(a) - Math.round(b)
+		}
+		if (type === 'DIVIDE') {
+			if (Math.round(b) === 0) {
+				return "Error"
+			}
+			return Math.round(a) / Math.round(b)
+		}
+	}
+}
+
+module.exports = Utils

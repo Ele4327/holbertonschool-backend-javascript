@@ -2,23 +2,27 @@ function calculateNumber(type, a, b) {
 
     const aRound = Math.round(a);
     const bRound = Math.round(b);
-    
+
     if (type === 'SUM') {
-      return aRound + bRound;
+      let sumValue = aRound + bRound
+      return sumValue;
     }
 
     if (type === 'SUBTRACT') {
-      return aRound - bRound;
+      let subValue = aRound - bRound;
+      return subValue;
     }
 
     if (type === 'DIVIDE') {
+      let divValue = aRound / bRound;
 
       if (bRound === 0) {
         return 'Error';
       }
 
-      return aRound / bRound;
+      return divValue;
     }
-  }
-  
-  module.exports = calculateNumber;
+
+}
+
+module.exports = calculateNumber;
